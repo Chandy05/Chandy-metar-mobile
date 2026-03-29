@@ -59,10 +59,10 @@
         .data-row { display: flex; align-items: center; border-bottom: 1px dashed var(--border-color); padding-bottom: 5px; }
         .data-label { width: 70px; font-size: 1.6vw; font-weight: bold; color: #a0aec0; }
         
-        /* [อัปเดตแก้อาการตกบรรทัด] บังคับให้อยู่บรรทัดเดียวกันด้วย flex-direction: row */
-        .data-value-container { display: flex; flex-direction: row; align-items: baseline; flex: 1; margin-left: 5px; gap: 10px; }
+        /* ป้องกันการตกบรรทัดของกลุ่มคำว่า หมอกแดด */
+        .data-value-container { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; flex: 1; margin-left: 5px; }
         .data-value { font-size: 1.8vw; font-weight: bold; color: var(--data-color); text-shadow: 0 0 8px rgba(0, 255, 204, 0.4); white-space: nowrap; }
-        .data-weather-desc { font-size: 1.1vw; color: #ffb703; font-weight: normal; white-space: nowrap; }
+        .data-weather-desc { font-size: 1.1vw; color: #ffb703; font-weight: normal; margin-top: -2px; white-space: nowrap; min-width: max-content; }
         
         .qnh-value { color: #ffb703; font-size: 2.5vw !important; text-shadow: 0 0 10px rgba(255, 183, 3, 0.4); }
 
@@ -131,7 +131,7 @@
             
             .data-label { font-size: 4vw; width: 100px; }
             .data-value { font-size: 5vw; }
-            .data-weather-desc { font-size: 3.5vw; white-space: nowrap; }
+            .data-weather-desc { font-size: 3.5vw; white-space: nowrap; min-width: max-content; }
             .qnh-value { font-size: 6.5vw !important; }
             .panel-title { font-size: 3.5vw; }
             
@@ -160,7 +160,7 @@
 
     <div class="header-bar">
         <div class="header-left-container">
-            <img src="logo_main.png?v=1" alt="RTAF Logo" class="main-logo" onerror="this.style.display='none'">
+            <img src="logo_main.png?v=2" alt="RTAF Logo" class="main-logo" onerror="this.style.display='none'">
             <div class="header-titles-block">
                 <div class="station-title">
                     ATC MET DISPLAY : 
@@ -190,7 +190,7 @@
                 </div>
                 <div class="identity-row">
                     <div class="range-identity">CHANDY RANGE (VTP4)</div>
-                    <img src="logo_chdy.png?v=1" alt="CHDY Icon" class="chdy-icon" onerror="this.style.display='none'">
+                    <img src="logo_chdy.png?v=2" alt="CHDY Icon" class="chdy-icon" onerror="this.style.display='none'">
                 </div>
             </div>
         </div>
@@ -213,14 +213,14 @@
         <div class="panel conditions-panel">
             <div class="panel-title">CONDITIONS</div>
             
-            <div class="data-row">
-                <div class="data-label">VIS.</div>
+            <div class="data-row" style="align-items: flex-start;">
+                <div class="data-label" style="margin-top: 3px;">VIS.</div>
                 <div class="data-value-container">
                     <div class="data-value" id="val-vis">----</div>
                     <div class="data-weather-desc" id="val-wx"></div>
                 </div>
-                <div class="data-label" style="width: auto; margin-right: 5px;">TIME</div>
-                <div class="data-value" id="val-time" style="color: #ffffff;">----</div>
+                <div class="data-label" style="width: auto; margin-right: 5px; margin-top: 3px;">TIME</div>
+                <div class="data-value" id="val-time" style="color: #ffffff; margin-top: 3px;">----</div>
             </div>
             
             <div class="data-row"><div class="data-label">FEW.</div><div class="data-value" id="val-few">----</div></div>
@@ -467,7 +467,7 @@
                 document.getElementById('val-time').innerText = '----'; 
                 document.getElementById('val-vis').innerText = '----'; 
                 document.getElementById('val-wx').innerText = ''; 
-                document.getElementById('val-wx').style.display = 'none'; // ซ่อนถ้าไม่มีข้อมูล
+                document.getElementById('val-wx').style.display = 'none';
                 document.getElementById('val-few').innerText = '----'; 
                 document.getElementById('val-sct').innerText = '----'; 
                 document.getElementById('val-bkn').innerText = '----'; 
@@ -497,7 +497,6 @@
                 document.getElementById('val-vis').innerText = pData.vis; 
                 
                 document.getElementById('val-wx').innerText = pData.wxDesc; 
-                // [เพิ่มการแสดงผลซ่อน/โชว์]
                 document.getElementById('val-wx').style.display = pData.wxDesc ? 'inline-block' : 'none';
                 
                 document.getElementById('val-few').innerHTML = pData.few; 
