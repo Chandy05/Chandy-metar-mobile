@@ -59,11 +59,11 @@
         .data-row { display: flex; align-items: center; border-bottom: 1px dashed var(--border-color); padding-bottom: 5px; }
         .data-label { width: 70px; font-size: 1.6vw; font-weight: bold; color: #a0aec0; }
         
-        .data-value-container { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; flex: 1; margin-left: 5px; }
+        /* [อัปเดตแก้อาการตกบรรทัด] บังคับให้อยู่บรรทัดเดียวกันด้วย flex-direction: row */
+        .data-value-container { display: flex; flex-direction: row; align-items: baseline; flex: 1; margin-left: 5px; gap: 10px; }
         .data-value { font-size: 1.8vw; font-weight: bold; color: var(--data-color); text-shadow: 0 0 8px rgba(0, 255, 204, 0.4); white-space: nowrap; }
-        .data-weather-desc { font-size: 1.1vw; color: #ffb703; font-weight: normal; margin-top: -2px; white-space: nowrap; }
+        .data-weather-desc { font-size: 1.1vw; color: #ffb703; font-weight: normal; white-space: nowrap; }
         
-        /* ขยายขนาด QNH ให้โดดเด่น */
         .qnh-value { color: #ffb703; font-size: 2.5vw !important; text-shadow: 0 0 10px rgba(255, 183, 3, 0.4); }
 
         /* --- COL 2: WIND INDICATOR --- */
@@ -132,7 +132,7 @@
             .data-label { font-size: 4vw; width: 100px; }
             .data-value { font-size: 5vw; }
             .data-weather-desc { font-size: 3.5vw; white-space: nowrap; }
-            .qnh-value { font-size: 6.5vw !important; } /* ขยาย QNH ในมือถือด้วย */
+            .qnh-value { font-size: 6.5vw !important; }
             .panel-title { font-size: 3.5vw; }
             
             .compass-circle { width: 60vw; height: 60vw; max-width: 350px; max-height: 350px; margin-top: 30px; }
@@ -213,14 +213,14 @@
         <div class="panel conditions-panel">
             <div class="panel-title">CONDITIONS</div>
             
-            <div class="data-row" style="align-items: flex-start;">
-                <div class="data-label" style="margin-top: 3px;">VIS.</div>
+            <div class="data-row">
+                <div class="data-label">VIS.</div>
                 <div class="data-value-container">
                     <div class="data-value" id="val-vis">----</div>
                     <div class="data-weather-desc" id="val-wx"></div>
                 </div>
-                <div class="data-label" style="width: auto; margin-right: 5px; margin-top: 3px;">TIME</div>
-                <div class="data-value" id="val-time" style="color: #ffffff; margin-top: 3px;">----</div>
+                <div class="data-label" style="width: auto; margin-right: 5px;">TIME</div>
+                <div class="data-value" id="val-time" style="color: #ffffff;">----</div>
             </div>
             
             <div class="data-row"><div class="data-label">FEW.</div><div class="data-value" id="val-few">----</div></div>
@@ -364,7 +364,6 @@
             const windMatch = metar.match(/\b(VRB|\d{3})(\d{2,3})(?:G(\d{2,3}))?KT\b/); 
             if (windMatch) { parsed.windDir = windMatch[1]; parsed.windSpd = windMatch[2]; if(windMatch[3]) parsed.gust = windMatch[3]; if(parsed.windDir === 'VRB') parsed.isVrb = true; } 
             
-            // --- ระบบถอดรหัส QNH แบบใหม่ (รองรับทั้ง InHg และ hPa/mb) ---
             const qnhMatch = metar.match(/\b(A|Q)(\d{4})\b/); 
             if (qnhMatch) { 
                 let qnhType = qnhMatch[1];
@@ -374,13 +373,10 @@
                 let inHgStr, mbStr;
                 
                 if (qnhType === 'A') {
-                    // รับค่ามาเป็น InHg (เช่น A2992) -> แปลงเป็น mb
                     inHgStr = qnhValStr;
-                    // สูตรมาตรฐาน 1 inHg = 33.86389 hPa
                     let calculatedMb = Math.round((qnhNum / 100) * 33.86389);
                     mbStr = calculatedMb.toString();
                 } else {
-                    // รับค่ามาเป็น QNH (เช่น Q1013) -> แปลงย้อนกลับเป็น InHg
                     mbStr = qnhValStr;
                     let calculatedInHg = (qnhNum / 33.86389).toFixed(2).replace('.', '');
                     inHgStr = calculatedInHg;
@@ -471,6 +467,7 @@
                 document.getElementById('val-time').innerText = '----'; 
                 document.getElementById('val-vis').innerText = '----'; 
                 document.getElementById('val-wx').innerText = ''; 
+                document.getElementById('val-wx').style.display = 'none'; // ซ่อนถ้าไม่มีข้อมูล
                 document.getElementById('val-few').innerText = '----'; 
                 document.getElementById('val-sct').innerText = '----'; 
                 document.getElementById('val-bkn').innerText = '----'; 
@@ -498,7 +495,10 @@
                 
                 document.getElementById('val-time').innerText = pData.time; 
                 document.getElementById('val-vis').innerText = pData.vis; 
+                
                 document.getElementById('val-wx').innerText = pData.wxDesc; 
+                // [เพิ่มการแสดงผลซ่อน/โชว์]
+                document.getElementById('val-wx').style.display = pData.wxDesc ? 'inline-block' : 'none';
                 
                 document.getElementById('val-few').innerHTML = pData.few; 
                 document.getElementById('val-sct').innerHTML = pData.sct; 
