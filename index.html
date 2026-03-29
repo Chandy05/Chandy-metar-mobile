@@ -61,8 +61,10 @@
         
         .data-value-container { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; flex: 1; margin-left: 5px; }
         .data-value { font-size: 1.8vw; font-weight: bold; color: var(--data-color); text-shadow: 0 0 8px rgba(0, 255, 204, 0.4); white-space: nowrap; }
-        /* บังคับคำอธิบายสภาพอากาศให้อยู่บรรทัดเดียวด้วย white-space: nowrap; */
         .data-weather-desc { font-size: 1.1vw; color: #ffb703; font-weight: normal; margin-top: -2px; white-space: nowrap; }
+        
+        /* ขยายขนาด QNH ให้โดดเด่น */
+        .qnh-value { color: #ffb703; font-size: 2.5vw !important; text-shadow: 0 0 10px rgba(255, 183, 3, 0.4); }
 
         /* --- COL 2: WIND INDICATOR --- */
         .wind-panel { flex: 1.1; align-items: center; justify-content: flex-start; padding-top: 40px; }
@@ -110,7 +112,7 @@
         @keyframes pulse-border { 0% { box-shadow: 0 0 10px rgba(255,51,51,0.2); } 50% { box-shadow: 0 0 25px rgba(255,51,51,0.8); } 100% { box-shadow: 0 0 10px rgba(255,51,51,0.2); } }
 
         /* ========================================================
-           RESPONSIVE DESIGN (มือถือ / แท็บเล็ต)
+           RESPONSIVE DESIGN 
            ======================================================== */
         @media (max-width: 900px) {
             body, html { height: auto; overflow-y: auto; overflow-x: hidden; }
@@ -130,6 +132,7 @@
             .data-label { font-size: 4vw; width: 100px; }
             .data-value { font-size: 5vw; }
             .data-weather-desc { font-size: 3.5vw; white-space: nowrap; }
+            .qnh-value { font-size: 6.5vw !important; } /* ขยาย QNH ในมือถือด้วย */
             .panel-title { font-size: 3.5vw; }
             
             .compass-circle { width: 60vw; height: 60vw; max-width: 350px; max-height: 350px; margin-top: 30px; }
@@ -197,7 +200,7 @@
             <div id="flight-rule-badge" class="flight-rule-badge vmc-steady">VMC</div>
             
             <div class="clock-box" id="main-clock-box" title="Double Click เพื่อเปิดนาฬิกาจับเวลา">
-                <div style="font-size: 0.9vw; color: #8898aa;" class="mobile-hide">LOCAL TIME</div>
+                <div style="font-size: 0.9vw; color: #8898aa;">LOCAL TIME</div>
                 <div id="sys-time-local" class="clock-local">--:--:--</div>
             </div>
         </div>
@@ -224,7 +227,9 @@
             <div class="data-row"><div class="data-label">SCT.</div><div class="data-value" id="val-sct">----</div></div>
             <div class="data-row"><div class="data-label">BKN.</div><div class="data-value" id="val-bkn">----</div></div>
             <div class="data-row"><div class="data-label">OVC.</div><div class="data-value" id="val-ovc">----</div></div>
-            <div class="data-row"><div class="data-label">QNH</div><div class="data-value" id="val-qnh" style="color: #ffb703;">----</div></div>
+            
+            <div class="data-row"><div class="data-label">QNH</div><div class="data-value qnh-value" id="val-qnh">----</div></div>
+            
             <div class="data-row" style="border: none; padding-bottom: 0;"><div class="data-label">TMP/DP</div><div class="data-value" id="val-temp" style="color: #3498db;">----</div></div>
         </div>
 
@@ -276,7 +281,6 @@
     <script>
         window.onerror = function(msg, url, line, col, error) { const overlay = document.getElementById('overlay'); if(overlay) { overlay.classList.remove('hide'); overlay.innerHTML = `<span style="color:red; font-weight:bold;">❌ JAVASCRIPT ERROR<br><br>${msg}</span>`; } return false; };
         
-        // --- CLOCK & TOT TIMER SYSTEM ---
         let currentLocalTimeStr = "";
         function updateClocks() {
             const now = new Date();
@@ -303,7 +307,6 @@
 
         function recordTOT() {
             if(document.getElementById('timer-modal').classList.contains('hide')) return; 
-
             const nowMs = Date.now();
             if (nowMs - lastTotTime < 300) return; 
             lastTotTime = nowMs;
@@ -320,10 +323,7 @@
         function handleTimerInteraction(e) {
             if(document.getElementById('timer-modal').classList.contains('hide')) return;
             if(e.target.classList.contains('close-modal-btn') || e.target.classList.contains('tot-clear-btn')) return;
-            
-            if (e.type === 'touchstart') {
-                e.preventDefault(); 
-            }
+            if (e.type === 'touchstart') { e.preventDefault(); }
             recordTOT();
         }
 
@@ -336,7 +336,6 @@
         
         function clearTotList() { document.getElementById('tot-list').innerHTML = ''; totCount = 0; }
 
-        // --- UPDATE PROGRESS BAR ---
         const updateIntervalMS = 10 * 60 * 1000; 
         let progressInterval;
         function resetProgressBar() {
@@ -365,7 +364,31 @@
             const windMatch = metar.match(/\b(VRB|\d{3})(\d{2,3})(?:G(\d{2,3}))?KT\b/); 
             if (windMatch) { parsed.windDir = windMatch[1]; parsed.windSpd = windMatch[2]; if(windMatch[3]) parsed.gust = windMatch[3]; if(parsed.windDir === 'VRB') parsed.isVrb = true; } 
             
-            const qnhMatch = metar.match(/\b(A|Q)(\d{4})\b/); if (qnhMatch) parsed.qnh = qnhMatch[2]; 
+            // --- ระบบถอดรหัส QNH แบบใหม่ (รองรับทั้ง InHg และ hPa/mb) ---
+            const qnhMatch = metar.match(/\b(A|Q)(\d{4})\b/); 
+            if (qnhMatch) { 
+                let qnhType = qnhMatch[1];
+                let qnhValStr = qnhMatch[2];
+                let qnhNum = parseInt(qnhValStr, 10);
+                
+                let inHgStr, mbStr;
+                
+                if (qnhType === 'A') {
+                    // รับค่ามาเป็น InHg (เช่น A2992) -> แปลงเป็น mb
+                    inHgStr = qnhValStr;
+                    // สูตรมาตรฐาน 1 inHg = 33.86389 hPa
+                    let calculatedMb = Math.round((qnhNum / 100) * 33.86389);
+                    mbStr = calculatedMb.toString();
+                } else {
+                    // รับค่ามาเป็น QNH (เช่น Q1013) -> แปลงย้อนกลับเป็น InHg
+                    mbStr = qnhValStr;
+                    let calculatedInHg = (qnhNum / 33.86389).toFixed(2).replace('.', '');
+                    inHgStr = calculatedInHg;
+                }
+                
+                parsed.qnh = `${inHgStr} / ${mbStr}`;
+            } 
+            
             const tempMatch = metar.match(/\b(M?\d{2})\/(M?\d{2})\b/);
             if (tempMatch) { let t = tempMatch[1].replace('M', '-'); let d = tempMatch[2].replace('M', '-'); parsed.tempDew = `${t}°C / ${d}°C`; }
 
