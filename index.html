@@ -14,8 +14,6 @@
         }
 
         body, html { margin: 0; padding: 0; width: 100%; height: 100vh; background-color: var(--bg-color); color: var(--text-main); font-family: 'Consolas', 'Courier New', monospace; overflow: hidden; display: flex; flex-direction: column; }
-        #update-bar-container { width: 100%; height: 4px; background-color: #1a2a40; position: absolute; top: 0; left: 0; z-index: 1000; }
-        #update-bar { height: 100%; width: 100%; background-color: var(--data-color); transition: width 1s linear; box-shadow: 0 0 10px var(--data-color); }
 
         /* --- HEADER --- */
         .header-bar { background-color: #0a0f18; border-bottom: 3px solid var(--accent-gold); padding: 8px 15px; display: flex; justify-content: space-between; align-items: center; }
@@ -34,8 +32,9 @@
         .header-right-container { display: flex; align-items: center; gap: 15px; }
         
         .action-btn { background-color: rgba(0, 255, 204, 0.1); border: 2px solid var(--data-color); color: var(--data-color); padding: 6px 12px; border-radius: 5px; font-family: 'Consolas', monospace; font-size: 1.3vw; font-weight: bold; cursor: pointer; box-shadow: 0 0 8px rgba(0, 255, 204, 0.3); transition: all 0.2s; }
-        .action-btn:hover { background-color: var(--data-color); color: #000; }
-        .action-btn:active { transform: scale(0.95); }
+        .action-btn:hover:not(:disabled) { background-color: var(--data-color); color: #000; }
+        .action-btn:active:not(:disabled) { transform: scale(0.95); }
+        .action-btn:disabled { border-color: #555; color: #555; cursor: not-allowed; box-shadow: none; background-color: transparent; }
 
         .flight-rule-badge { padding: 6px 12px; border-radius: 5px; font-size: 1.6vw; font-weight: bold; color: white; text-shadow: 1px 1px 2px #000; letter-spacing: 2px; border: 2px solid rgba(255,255,255,0.5); transition: all 0.3s; }
         
@@ -59,10 +58,9 @@
         .data-row { display: flex; align-items: center; border-bottom: 1px dashed var(--border-color); padding-bottom: 5px; }
         .data-label { width: 70px; font-size: 1.6vw; font-weight: bold; color: #a0aec0; }
         
-        /* ป้องกันการตกบรรทัดของกลุ่มคำว่า หมอกแดด */
-        .data-value-container { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; flex: 1; margin-left: 5px; }
+        .data-value-container { display: flex; flex-direction: row; align-items: baseline; flex: 1; margin-left: 5px; gap: 10px; }
         .data-value { font-size: 1.8vw; font-weight: bold; color: var(--data-color); text-shadow: 0 0 8px rgba(0, 255, 204, 0.4); white-space: nowrap; }
-        .data-weather-desc { font-size: 1.1vw; color: #ffb703; font-weight: normal; margin-top: -2px; white-space: nowrap; min-width: max-content; }
+        .data-weather-desc { font-size: 1.1vw; color: #ffb703; font-weight: normal; white-space: nowrap; }
         
         .qnh-value { color: #ffb703; font-size: 2.5vw !important; text-shadow: 0 0 10px rgba(255, 183, 3, 0.4); }
 
@@ -119,12 +117,12 @@
             .dashboard-container { flex-direction: column; height: auto; padding: 10px; }
             .panel { min-height: 350px; margin-bottom: 10px; }
             .header-bar { flex-direction: column; align-items: flex-start; gap: 15px; }
-            .header-right-container { width: 100%; justify-content: space-between; }
+            .header-right-container { width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 5px;}
             
             .station-title { font-size: 4vw; }
             .station-dropdown { font-size: 3.5vw; }
             .range-identity { font-size: 2.5vw; }
-            .action-btn { font-size: 3.5vw; }
+            .action-btn { font-size: 3vw; padding: 8px; }
             .flight-rule-badge { font-size: 4vw; }
             .clock-box { font-size: 3.5vw; }
             .raw-metar-box { font-size: 3vw; white-space: normal; word-break: break-all; }
@@ -155,8 +153,6 @@
     </style>
 </head>
 <body>
-
-    <div id="update-bar-container"><div id="update-bar"></div></div>
 
     <div class="header-bar">
         <div class="header-left-container">
@@ -196,6 +192,7 @@
         </div>
         
         <div class="header-right-container">
+            <button class="action-btn" id="btn-update" onclick="manualUpdate()">🔄 UPDATE</button>
             <button class="action-btn" onclick="playATIS()">🔊 PLAY ATIS</button>
             <div id="flight-rule-badge" class="flight-rule-badge vmc-steady">VMC</div>
             
@@ -213,14 +210,14 @@
         <div class="panel conditions-panel">
             <div class="panel-title">CONDITIONS</div>
             
-            <div class="data-row" style="align-items: flex-start;">
-                <div class="data-label" style="margin-top: 3px;">VIS.</div>
+            <div class="data-row">
+                <div class="data-label">VIS.</div>
                 <div class="data-value-container">
                     <div class="data-value" id="val-vis">----</div>
                     <div class="data-weather-desc" id="val-wx"></div>
                 </div>
-                <div class="data-label" style="width: auto; margin-right: 5px; margin-top: 3px;">TIME</div>
-                <div class="data-value" id="val-time" style="color: #ffffff; margin-top: 3px;">----</div>
+                <div class="data-label" style="width: auto; margin-right: 5px;">TIME</div>
+                <div class="data-value" id="val-time" style="color: #ffffff;">----</div>
             </div>
             
             <div class="data-row"><div class="data-label">FEW.</div><div class="data-value" id="val-few">----</div></div>
@@ -336,18 +333,6 @@
         
         function clearTotList() { document.getElementById('tot-list').innerHTML = ''; totCount = 0; }
 
-        const updateIntervalMS = 10 * 60 * 1000; 
-        let progressInterval;
-        function resetProgressBar() {
-            const bar = document.getElementById('update-bar');
-            bar.style.transition = 'none'; bar.style.width = '100%'; clearInterval(progressInterval);
-            let timeLeft = updateIntervalMS;
-            progressInterval = setInterval(() => {
-                timeLeft -= 1000; let pct = (timeLeft / updateIntervalMS) * 100;
-                bar.style.transition = 'width 1s linear'; bar.style.width = pct + '%';
-            }, 1000);
-        }
-
         const apiUrl = 'https://weather.rtaf.mi.th/api/v1/metar/desktop/getMetarAllStationJSON';
         let cachedDatabaseText = ""; let currentParsedData = null;
         const wxDictionary = { 'HZ': 'หมอกแดด', 'BR': 'ในหมอก', 'FG': 'หมอกหนา', 'RA': 'มีฝน', '-RA': 'ฝนเบา', '+RA': 'ฝนหนัก', 'TS': 'ฝนฟ้าคะนอง', 'VCSH': 'ฝนระยะไกล', 'VCTS': 'ฝนฟ้าคะนองระยะไกล', 'DZ': 'ฝนละออง', 'SHRA': 'ฝนซู่' };
@@ -371,7 +356,6 @@
                 let qnhNum = parseInt(qnhValStr, 10);
                 
                 let inHgStr, mbStr;
-                
                 if (qnhType === 'A') {
                     inHgStr = qnhValStr;
                     let calculatedMb = Math.round((qnhNum / 100) * 33.86389);
@@ -381,7 +365,6 @@
                     let calculatedInHg = (qnhNum / 33.86389).toFixed(2).replace('.', '');
                     inHgStr = calculatedInHg;
                 }
-                
                 parsed.qnh = `${inHgStr} / ${mbStr}`;
             } 
             
@@ -399,10 +382,7 @@
                     const extra = cloud.substring(6) || ''; 
                     
                     let format = `${height} FT`;
-                    if(extra) {
-                        format = `<span style="color: var(--cloud-cb); text-shadow: 0 0 5px var(--warning-color); font-weight: 900;">${extra}</span> ${height} FT`;
-                    }
-                    
+                    if(extra) { format = `<span style="color: var(--cloud-cb); text-shadow: 0 0 5px var(--warning-color); font-weight: 900;">${extra}</span> ${height} FT`; }
                     if(parsed[type] === '') parsed[type] = format; else parsed[type] += `, ${format}`; 
                     if(type === 'bkn' || type === 'ovc') { if(parseInt(hStr, 10) < lowestCeiling) lowestCeiling = parseInt(hStr, 10); }
                 }); 
@@ -411,7 +391,6 @@
             
             let visMeters = 9999; let wxDetected = []; let metarWords = metar.split(' '); 
             for (let w of metarWords) { if (wxDictionary[w]) wxDetected.push(wxDictionary[w]); } 
-            
             if (wxDetected.length > 0) { parsed.wxDesc = `(${wxDetected.join(', ')})`; }
 
             if (metar.includes('CAVOK')) { 
@@ -429,18 +408,13 @@
             
             if (visMeters < 5000 || lowestCeiling < 15) { parsed.flightRule = 'IMC'; } else { parsed.flightRule = 'VMC'; }
 
-            let hasRmkCb = false;
-            let cbDesc = "เมฆ CB";
+            let hasRmkCb = false; let cbDesc = "เมฆ CB";
             const rmkIndex = metar.indexOf('RMK'); 
             if (rmkIndex !== -1) { 
                 const rmkStr = metar.substring(rmkIndex); 
                 const cbMatch = rmkStr.match(/\bCB\s+([A-Za-z\s]+?)(?=\s+SLP|\s+NOSIG|\s+QFE|\s*\d|$)/); 
-                if (cbMatch) { 
-                    hasRmkCb = true;
-                    cbDesc = "CB " + cbMatch[1].trim(); 
-                } else if (rmkStr.includes(' CB')) {
-                    hasRmkCb = true;
-                }
+                if (cbMatch) { hasRmkCb = true; cbDesc = "CB " + cbMatch[1].trim(); } 
+                else if (rmkStr.includes(' CB')) { hasRmkCb = true; }
             }
 
             if(metar.includes(' TS') || metar.includes('TS ') || metar.includes('VCTS')) { 
@@ -450,9 +424,7 @@
             } else if(metar.includes(' RA') || metar.includes('RA ') || metar.includes('-RA') || metar.includes('+RA')) { 
                 parsed.caution.push('มีฝนบริเวณสนามฝึกฯ'); 
                 if(hasRmkCb) parsed.caution.push(cbDesc);
-            } else if(hasRmkCb) {
-                parsed.caution.push(cbDesc);
-            }
+            } else if(hasRmkCb) { parsed.caution.push(cbDesc); }
             
             return parsed; 
         }
@@ -482,11 +454,8 @@
                 document.getElementById('caution-box').classList.add('hide');
                 
                 const badge = document.getElementById('flight-rule-badge');
-                badge.innerText = 'N/A';
-                badge.className = 'flight-rule-badge na-steady';
-
-                currentParsedData = null; 
-                return; 
+                badge.innerText = 'N/A'; badge.className = 'flight-rule-badge na-steady';
+                currentParsedData = null; return; 
             } 
             
             const rawMetar = match[0].trim(); document.getElementById('raw-metar').innerText = rawMetar; 
@@ -495,7 +464,6 @@
                 
                 document.getElementById('val-time').innerText = pData.time; 
                 document.getElementById('val-vis').innerText = pData.vis; 
-                
                 document.getElementById('val-wx').innerText = pData.wxDesc; 
                 document.getElementById('val-wx').style.display = pData.wxDesc ? 'inline-block' : 'none';
                 
@@ -507,11 +475,8 @@
                 document.getElementById('val-temp').innerText = pData.tempDew;
                 
                 const badge = document.getElementById('flight-rule-badge'); badge.innerText = pData.flightRule;
-                if(pData.flightRule === 'IMC') { 
-                    badge.className = 'flight-rule-badge imc-flashing'; 
-                } else { 
-                    badge.className = 'flight-rule-badge vmc-steady'; 
-                }
+                if(pData.flightRule === 'IMC') { badge.className = 'flight-rule-badge imc-flashing'; } 
+                else { badge.className = 'flight-rule-badge vmc-steady'; }
 
                 document.getElementById('wind-spd').innerText = pData.windSpd; const needleBox = document.getElementById('wind-needle-box'); const gustAlert = document.getElementById('gust-alert');
                 if(pData.gust) {
@@ -531,21 +496,40 @@
             } catch (parseError) { console.error(parseError); } 
         }
         
+        // --- ฟังก์ชันอัปเดตข้อมูลแบบ Manual ---
         function fetchWeatherData() { 
             const overlay = document.getElementById('overlay'); if(!cachedDatabaseText) overlay.classList.remove('hide'); 
             fetch(apiUrl, { method: 'POST', headers: { 'Accept': '*/*' } }).then(response => { 
                 if (!response.ok) throw new Error('HTTP STATUS: ' + response.status); return response.text(); 
             }).then(text => { 
-                cachedDatabaseText = text; renderDashboard(); overlay.classList.add('hide'); resetProgressBar();
+                cachedDatabaseText = text; renderDashboard(); overlay.classList.add('hide'); 
             }).catch(error => { 
-                overlay.classList.remove('hide'); overlay.innerHTML = `<span style="color:red; font-weight:bold;">❌ SYSTEM ERROR<br><br>${error.message}<br><br><span style="font-size:1.5vw; color:#fff;">RETRYING IN 10 MINS...</span></span>`; 
+                overlay.classList.remove('hide'); overlay.innerHTML = `<span style="color:red; font-weight:bold;">❌ SYSTEM ERROR<br><br>${error.message}<br><br><span style="font-size:1.5vw; color:#fff;">Please try updating again.</span></span>`; 
             }); 
             const radarIframe = document.getElementById('radar-iframe'); radarIframe.src = radarIframe.src; 
             const fsRadarIframe = document.getElementById('fs-radar-iframe');
             if(fsRadarIframe.src) fsRadarIframe.src = fsRadarIframe.src;
         }
+        
+        // --- ฟังก์ชันเมื่อกดปุ่ม UPDATE (ป้องกันการสแปม) ---
+        function manualUpdate() {
+            const btn = document.getElementById('btn-update');
+            btn.innerText = '⏳ FETCHING...';
+            btn.disabled = true; // ล็อกปุ่มทันที
+            
+            fetchWeatherData(); // เรียกดึงข้อมูล
+            
+            // ปลดล็อกปุ่มหลังจากผ่านไป 10 วินาที
+            setTimeout(() => {
+                btn.innerText = '🔄 UPDATE';
+                btn.disabled = false;
+            }, 10000); 
+        }
+
         document.getElementById('station-select').addEventListener('change', renderDashboard);
-        fetchWeatherData(); setInterval(fetchWeatherData, updateIntervalMS); 
+        
+        // ดึงข้อมูลครั้งแรกเมื่อเปิดหน้าเว็บเท่านั้น (ยกเลิก setInterval)
+        fetchWeatherData(); 
 
         function playATIS() {
             if (!currentParsedData) return;
