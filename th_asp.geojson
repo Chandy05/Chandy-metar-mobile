@@ -573,10 +573,8 @@
           ]
         ]
       }
-    }
-  ]
-},
-{
+    },
+    {
       "type": "Feature",
       "properties": { "name": "BANGKOK TMA", "type": "TMA", "radius_nm": 50 },
       "geometry": { "type": "Point", "coordinates": [100.6070, 13.9126] }
@@ -651,3 +649,5 @@
       "properties": { "name": "VTBK ATZ (KAMPHAENG SAEN)", "type": "ATZ", "radius_nm": 5 },
       "geometry": { "type": "Point", "coordinates": [99.9167, 14.1017] }
     }
+  ]
+}
