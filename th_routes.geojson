@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "route_a464",
+      "properties": { "name": "ROUTE A464", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [102.07, 14.93], [104.87, 15.25]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w1",
+      "properties": { "name": "ROUTE W1", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [99.95, 12.63], [99.36, 10.71], [99.13, 9.13], [98.31, 8.11]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w4",
+      "properties": { "name": "ROUTE W4", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [101.67, 12.78], [102.31, 12.27]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w5",
+      "properties": { "name": "ROUTE W5", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[98.31, 8.11], [100.39, 6.93]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w6",
+      "properties": { "name": "ROUTE W6", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [99.94, 8.54], [100.39, 6.93]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w7",
+      "properties": { "name": "ROUTE W7", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [100.30, 15.27], [100.28, 16.77]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w8",
+      "properties": { "name": "ROUTE W8", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.28, 16.77], [100.16, 18.13], [98.96, 18.76]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w9",
+      "properties": { "name": "ROUTE W9", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [98.96, 18.76]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w10",
+      "properties": { "name": "ROUTE W10", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[102.07, 14.93], [102.78, 16.46], [102.78, 17.38]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w12",
+      "properties": { "name": "ROUTE W12", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[98.96, 18.76], [99.88, 19.95]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w13",
+      "properties": { "name": "ROUTE W13", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.39, 6.93], [101.74, 6.52]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w15",
+      "properties": { "name": "ROUTE W15", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [102.78, 17.38]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w19",
+      "properties": { "name": "ROUTE W19", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [98.98, 8.09]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w21",
+      "properties": { "name": "ROUTE W21", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [100.28, 16.77], [99.88, 19.95]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_r474",
+      "properties": { "name": "ROUTE R474", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [101.67, 12.78], [102.31, 12.27]] }
+    },
+    {
+      "type": "Feature",
+      "id": "route_w39",
+      "properties": { "name": "ROUTE W39", "type": "ROUTE" },
+      "geometry": { "type": "LineString", "coordinates": [[99.13, 9.13], [99.94, 8.54], [100.39, 6.93]] }
+    }
+  ]
+}
