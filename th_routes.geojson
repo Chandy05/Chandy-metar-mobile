@@ -41,7 +41,7 @@
       "type": "Feature",
       "id": "route_w8",
       "properties": { "name": "ROUTE W8", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.28, 16.77], [100.16, 18.13], [98.96, 18.76]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.2975, 15.2758], [102.1397, 14.9172]] }
     },
     {
       "type": "Feature",
