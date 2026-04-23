@@ -4,575 +4,166 @@
     {
       "type": "Feature",
       "id": "vtr1",
-      "properties": {
-        "name": "VTR1 BANGKOK CITY",
-        "type": "VTR",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [100.538333, 13.765000]
-      },
-      "properties_details": {
-        "radius_nm": 10,
-        "description": "Circle of 10 NM radius centred on point 134554N 1003218E"
-      }
+      "properties": { "name": "VTR1 BANGKOK CITY", "type": "VTR", "country": "TH" },
+      "geometry": { "type": "Point", "coordinates": [100.538333, 13.765000] },
+      "properties_details": { "radius_nm": 10, "description": "Circle of 10 NM radius centred on point 134554N 1003218E" }
     },
     {
       "type": "Feature",
       "id": "vtr2",
-      "properties": {
-        "name": "VTR2 CHITRLADA PALACE",
-        "type": "VTR",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [100.521233, 13.768106]
-      },
-      "properties_details": {
-        "radius_nm": 1,
-        "description": "Circle of 1 NM radius centred on point 134605.18N 1003116.44E"
-      }
+      "properties": { "name": "VTR2 CHITRLADA PALACE", "type": "VTR", "country": "TH" },
+      "geometry": { "type": "Point", "coordinates": [100.521233, 13.768106] },
+      "properties_details": { "radius_nm": 1, "description": "Circle of 1 NM radius centred on point 134605.18N 1003116.44E" }
     },
     {
       "type": "Feature",
       "id": "vtr8",
-      "properties": {
-        "name": "VTR8 KAMPHAENG SAEN JETTISON",
-        "type": "VTR",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [100.333333, 12.883333],
-            [100.416667, 12.883333],
-            [100.283333, 12.583333],
-            [100.191667, 12.583333],
-            [100.333333, 12.883333]
-          ]
-        ]
-      }
+      "properties": { "name": "VTR8 KAMPHAENG SAEN JETTISON", "type": "VTR", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [100.333333, 12.883333], [100.416667, 12.883333], [100.283333, 12.583333], [100.191667, 12.583333], [100.333333, 12.883333] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtr68",
-      "properties": {
-        "name": "VTR68 NAM PHONG",
-        "type": "VTR",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [102.933108, 16.680161],
-            [102.934983, 16.636361],
-            [102.951853, 16.680347],
-            [102.952308, 16.637436],
-            [102.933108, 16.680161]
-          ]
-        ]
-      }
+      "properties": { "name": "VTR68 NAM PHONG", "type": "VTR", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [102.933108, 16.680161], [102.934983, 16.636361], [102.951853, 16.680347], [102.952308, 16.637436], [102.933108, 16.680161] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd2",
-      "properties": {
-        "name": "VTD2 LOP BURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [100.169444, 15.121111],
-            [100.833333, 15.116667],
-            [100.833333, 14.916667],
-            [101.090278, 14.916667],
-            [101.091389, 14.710278],
-            [101.090278, 14.610278],
-            [100.150000, 14.616667],
-            [100.169444, 15.121111]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD2 LOP BURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [100.169444, 15.121111], [100.833333, 15.116667], [100.833333, 14.916667], [101.090278, 14.916667], [101.091389, 14.710278], [101.090278, 14.610278], [100.150000, 14.616667], [100.169444, 15.121111] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd3a",
-      "properties": {
-        "name": "VTD3A KABIN BURI/WATTANA NAKHON",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [102.333333, 13.983333],
-            [102.845278, 13.983333],
-            [102.360556, 13.500000],
-            [102.333333, 13.500000],
-            [102.333333, 13.983333]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD3A KABIN BURI/WATTANA NAKHON", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [102.333333, 13.983333], [102.845278, 13.983333], [102.360556, 13.500000], [102.333333, 13.500000], [102.333333, 13.983333] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd3b",
-      "properties": {
-        "name": "VTD3B KABIN BURI/WATTANA NAKHON",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [101.900000, 13.983333],
-            [102.333333, 13.983333],
-            [102.333333, 13.500000],
-            [101.900000, 13.500000],
-            [101.900000, 13.983333]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD3B KABIN BURI/WATTANA NAKHON", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [101.900000, 13.983333], [102.333333, 13.983333], [102.333333, 13.500000], [101.900000, 13.500000], [101.900000, 13.983333] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd6a",
-      "properties": {
-        "name": "VTD6A BANGKOK, NONTHABURI, NAKHON PATHOM, SUPHANBURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [100.416944, 14.303056],
-            [100.670833, 14.305556],
-            [100.444722, 13.972222],
-            [100.214167, 14.083333],
-            [100.416944, 14.303056]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD6A BANGKOK, NONTHABURI, NAKHON PATHOM, SUPHANBURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [100.416944, 14.303056], [100.670833, 14.305556], [100.444722, 13.972222], [100.214167, 14.083333], [100.416944, 14.303056] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd6b",
-      "properties": {
-        "name": "VTD6B BANGKOK, NONTHABURI, NAKHON PATHOM, SUPHANBURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [100.214167, 14.083333],
-            [100.444722, 13.972222],
-            [100.373611, 13.767778],
-            [100.215278, 13.775000],
-            [100.214167, 14.083333]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD6B BANGKOK, NONTHABURI, NAKHON PATHOM, SUPHANBURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [100.214167, 14.083333], [100.444722, 13.972222], [100.373611, 13.767778], [100.215278, 13.775000], [100.214167, 14.083333] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd8c",
-      "properties": {
-        "name": "VTD8C KANCHANABURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [99.825000, 13.881389],
-            [99.383333, 13.816667],
-            [99.383333, 14.250000],
-            [99.873889, 14.158333],
-            [99.825000, 13.881389]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD8C KANCHANABURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [99.825000, 13.881389], [99.383333, 13.816667], [99.383333, 14.250000], [99.873889, 14.158333], [99.825000, 13.881389] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd8d",
-      "properties": {
-        "name": "VTD8D KANCHANABURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [100.183333, 13.933333],
-            [99.825000, 13.881389],
-            [99.873889, 14.158333],
-            [100.183333, 14.100000],
-            [100.183333, 13.933333]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD8D KANCHANABURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [100.183333, 13.933333], [99.825000, 13.881389], [99.873889, 14.158333], [100.183333, 14.100000], [100.183333, 13.933333] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd8e",
-      "properties": {
-        "name": "VTD8E SUPHAN BURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [99.873889, 14.158333],
-            [99.383333, 14.250000],
-            [99.950000, 14.900000],
-            [100.219444, 14.551111],
-            [99.873889, 14.158333]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD8E SUPHAN BURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [99.873889, 14.158333], [99.383333, 14.250000], [99.950000, 14.900000], [100.219444, 14.551111], [99.873889, 14.158333] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd8f",
-      "properties": {
-        "name": "VTD8F SUPHAN BURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [100.183333, 14.100000],
-            [99.873889, 14.158333],
-            [100.219444, 14.551111],
-            [100.400000, 14.316667],
-            [100.183333, 14.100000]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD8F SUPHAN BURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [100.183333, 14.100000], [99.873889, 14.158333], [100.219444, 14.551111], [100.400000, 14.316667], [100.183333, 14.100000] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd8g",
-      "properties": {
-        "name": "VTD8G SUPHAN BURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [99.383333, 14.432778],
-            [99.542222, 14.432778],
-            [99.383333, 14.250000],
-            [99.383333, 14.432778]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD8G SUPHAN BURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [99.383333, 14.432778], [99.542222, 14.432778], [99.383333, 14.250000], [99.383333, 14.432778] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd30w_area1",
-      "properties": {
-        "name": "VTD30W NAKHON RATCHASIMA (Area 1)",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [101.263278, 14.818250],
-            [102.179806, 16.334833],
-            [102.479778, 16.068194],
-            [101.996528, 14.993250],
-            [101.379944, 14.718278],
-            [101.263278, 14.818250]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD30W NAKHON RATCHASIMA (Area 1)", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [101.263278, 14.818250], [102.179806, 16.334833], [102.479778, 16.068194], [101.996528, 14.993250], [101.379944, 14.718278], [101.263278, 14.818250] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd30w_area2",
-      "properties": {
-        "name": "VTD30W NAKHON RATCHASIMA (Area 2)",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [102.329806, 15.151583],
-            [102.713083, 16.001528],
-            [103.363000, 15.818222],
-            [103.363000, 15.218250],
-            [102.329806, 15.151583]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD30W NAKHON RATCHASIMA (Area 2)", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [102.329806, 15.151583], [102.713083, 16.001528], [103.363000, 15.818222], [103.363000, 15.218250], [102.329806, 15.151583] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd33_area1",
-      "properties": {
-        "name": "VTD33 NAKHON SAWAN, CHAI NAT (Area 1)",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [99.729244, 15.690497],
-            [99.856333, 15.690039],
-            [100.044136, 15.115647],
-            [99.954789, 15.001717],
-            [99.729244, 15.690497]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD33 NAKHON SAWAN, CHAI NAT (Area 1)", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [99.729244, 15.690497], [99.856333, 15.690039], [100.044136, 15.115647], [99.954789, 15.001717], [99.729244, 15.690497] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd33_area2",
-      "properties": {
-        "name": "VTD33 NAKHON SAWAN, CHAI NAT (Area 2)",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [99.423092, 16.618150],
-            [99.729244, 15.690497],
-            [99.954789, 15.001717],
-            [99.390942, 15.003381],
-            [98.571536, 15.646592],
-            [98.589558, 16.585789],
-            [98.880222, 16.618083],
-            [99.423092, 16.618150]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD33 NAKHON SAWAN, CHAI NAT (Area 2)", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [99.423092, 16.618150], [99.729244, 15.690497], [99.954789, 15.001717], [99.390942, 15.003381], [98.571536, 15.646592], [98.589558, 16.585789], [98.880222, 16.618083], [99.423092, 16.618150] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd34_area1",
-      "properties": {
-        "name": "VTD34 PHETCHABUN, PHICHIT (Area 1)",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [101.029972, 15.218222],
-            [100.446694, 15.218222],
-            [100.363389, 15.401528],
-            [100.363361, 16.273069],
-            [100.774514, 16.582833],
-            [101.446556, 16.534806],
-            [101.029972, 15.218222]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD34 PHETCHABUN, PHICHIT (Area 1)", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [101.029972, 15.218222], [100.446694, 15.218222], [100.363389, 15.401528], [100.363361, 16.273069], [100.774514, 16.582833], [101.446556, 16.534806], [101.029972, 15.218222] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd43",
-      "properties": {
-        "name": "VTD43 LOP BURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [100.796667, 15.218222],
-            [101.929833, 16.451472],
-            [102.179806, 16.334833],
-            [101.263278, 14.818250],
-            [100.796667, 15.218222]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD43 LOP BURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [100.796667, 15.218222], [101.929833, 16.451472], [102.179806, 16.334833], [101.263278, 14.818250], [100.796667, 15.218222] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd63_area1",
-      "properties": {
-        "name": "VTD63 UDON, LOEI (Area 1)",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [102.591667, 17.846667],
-            [102.466667, 17.000000],
-            [101.500000, 17.000000],
-            [101.500000, 17.733333],
-            [102.591667, 17.846667]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD63 UDON, LOEI (Area 1)", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [102.591667, 17.846667], [102.466667, 17.000000], [101.500000, 17.000000], [101.500000, 17.733333], [102.591667, 17.846667] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd63_area2",
-      "properties": {
-        "name": "VTD63 UDON, LOEI, KHON KAEN (Area 2)",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [102.466667, 17.000000],
-            [102.658333, 16.933333],
-            [102.283333, 16.500000],
-            [101.500000, 16.500000],
-            [101.500000, 17.000000],
-            [102.466667, 17.000000]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD63 UDON, LOEI, KHON KAEN (Area 2)", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [102.466667, 17.000000], [102.658333, 16.933333], [102.283333, 16.500000], [101.500000, 16.500000], [101.500000, 17.000000], [102.466667, 17.000000] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd64_north",
-      "properties": {
-        "name": "VTD64 UDON, NONG KHAI (North Area)",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [102.783333, 17.916667],
-            [102.791667, 17.883333],
-            [103.322500, 17.425500],
-            [104.689333, 17.532333],
-            [102.783333, 17.916667]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD64 UDON, NONG KHAI (North Area)", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [102.783333, 17.916667], [102.791667, 17.883333], [103.322500, 17.425500], [104.689333, 17.532333], [102.783333, 17.916667] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd64_south",
-      "properties": {
-        "name": "VTD64 UDON, NONG KHAI (South Area)",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [103.322500, 17.425500],
-            [103.263333, 17.150000],
-            [104.153333, 16.500000],
-            [104.666667, 16.500000],
-            [104.689333, 17.532333],
-            [103.322500, 17.425500]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD64 UDON, NONG KHAI (South Area)", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [103.322500, 17.425500], [103.263333, 17.150000], [104.153333, 16.500000], [104.666667, 16.500000], [104.689333, 17.532333], [103.322500, 17.425500] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd67",
-      "properties": {
-        "name": "VTD67 KANCHANABURI",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [98.500000, 14.900000],
-            [99.950000, 14.900000],
-            [99.383333, 14.250000],
-            [99.383333, 13.816667],
-            [99.233333, 13.816667],
-            [98.500000, 14.583333],
-            [98.500000, 14.900000]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD67 KANCHANABURI", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [98.500000, 14.900000], [99.950000, 14.900000], [99.383333, 14.250000], [99.383333, 13.816667], [99.233333, 13.816667], [98.500000, 14.583333], [98.500000, 14.900000] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd77",
-      "properties": {
-        "name": "VTD77 KHON KAEN / ROI-ET",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [103.654167, 16.000000],
-            [103.408333, 15.770833],
-            [103.408333, 16.466667],
-            [103.654167, 16.233333],
-            [103.654167, 16.000000]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD77 KHON KAEN / ROI-ET", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [103.654167, 16.000000], [103.408333, 15.770833], [103.408333, 16.466667], [103.654167, 16.233333], [103.654167, 16.000000] ] ] }
     },
     {
       "type": "Feature",
       "id": "vtd461",
-      "properties": {
-        "name": "VTD461 PHITSANULOK",
-        "type": "VTD",
-        "country": "TH"
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [99.372500, 16.882500],
-            [99.917222, 16.883333],
-            [100.256111, 15.871111],
-            [100.253056, 15.383333],
-            [100.083333, 15.383333],
-            [99.714167, 15.871111],
-            [99.372500, 16.882500]
-          ]
-        ]
-      }
+      "properties": { "name": "VTD461 PHITSANULOK", "type": "VTD", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [99.372500, 16.882500], [99.917222, 16.883333], [100.256111, 15.871111], [100.253056, 15.383333], [100.083333, 15.383333], [99.714167, 15.871111], [99.372500, 16.882500] ] ] }
     },
     {
       "type": "Feature",
@@ -586,7 +177,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTBL CTR (KHOK KATHIAM)", "type": "CTR", "radius_nm": 10 },
+      "properties": { "name": "VTBL CTR (KHOK KATHIAM)", "type": "CTR", "radius_nm": 12 },
       "geometry": { "type": "Point", "coordinates": [100.6630, 14.8746] }
     },
     {
@@ -596,7 +187,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTPI CTR (TAKHLI)", "type": "CTR", "radius_nm": 10 },
+      "properties": { "name": "VTPI CTR (TAKHLI)", "type": "CTR", "radius_nm": 30 },
       "geometry": { "type": "Point", "coordinates": [100.3000, 15.2764] }
     },
     {
@@ -611,7 +202,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTUN CTR (KHORAT)", "type": "CTR", "radius_nm": 10 },
+      "properties": { "name": "VTUN CTR (KHORAT)", "type": "CTR", "radius_nm": 30 },
       "geometry": { "type": "Point", "coordinates": [102.0785, 14.9359] }
     },
     {
@@ -631,7 +222,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTUD CTR (UDON THANI)", "type": "CTR", "radius_nm": 10 },
+      "properties": { "name": "VTUD CTR (UDON THANI)", "type": "CTR", "radius_nm": 30 },
       "geometry": { "type": "Point", "coordinates": [102.7880, 17.3864] }
     },
     {
@@ -641,7 +232,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTBK CTR (KAMPHAENG SAEN)", "type": "CTR", "radius_nm": 10 },
+      "properties": { "name": "VTBK CTR (KAMPHAENG SAEN)", "type": "CTR", "radius_nm": 30 },
       "geometry": { "type": "Point", "coordinates": [99.9167, 14.1017] }
     },
     {
