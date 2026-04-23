@@ -575,4 +575,79 @@
       }
     }
   ]
-}
+},
+{
+      "type": "Feature",
+      "properties": { "name": "BANGKOK TMA", "type": "TMA", "radius_nm": 50 },
+      "geometry": { "type": "Point", "coordinates": [100.6070, 13.9126] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTBD ATZ (DON MUEANG)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [100.6070, 13.9126] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTBL CTR (KHOK KATHIAM)", "type": "CTR", "radius_nm": 10 },
+      "geometry": { "type": "Point", "coordinates": [100.6630, 14.8746] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTBL ATZ (KHOK KATHIAM)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [100.6630, 14.8746] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTPI CTR (TAKHLI)", "type": "CTR", "radius_nm": 10 },
+      "geometry": { "type": "Point", "coordinates": [100.3000, 15.2764] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTPI ATZ (TAKHLI)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [100.3000, 15.2764] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTUN TMA (KHORAT)", "type": "TMA", "radius_nm": 30 },
+      "geometry": { "type": "Point", "coordinates": [102.0785, 14.9359] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTUN CTR (KHORAT)", "type": "CTR", "radius_nm": 10 },
+      "geometry": { "type": "Point", "coordinates": [102.0785, 14.9359] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTUN ATZ (KHORAT)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [102.0785, 14.9359] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTBH ATZ (SA PRAN NAK)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [100.6430, 14.9494] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTUD TMA (UDON THANI)", "type": "TMA", "radius_nm": 30 },
+      "geometry": { "type": "Point", "coordinates": [102.7880, 17.3864] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTUD CTR (UDON THANI)", "type": "CTR", "radius_nm": 10 },
+      "geometry": { "type": "Point", "coordinates": [102.7880, 17.3864] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTUD ATZ (UDON THANI)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [102.7880, 17.3864] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTBK CTR (KAMPHAENG SAEN)", "type": "CTR", "radius_nm": 10 },
+      "geometry": { "type": "Point", "coordinates": [99.9167, 14.1017] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTBK ATZ (KAMPHAENG SAEN)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [99.9167, 14.1017] }
+    }
