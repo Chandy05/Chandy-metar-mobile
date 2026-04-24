@@ -1,1 +1,81 @@
-
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "tra_cg_sattahip",
+      "properties": { 
+        "name": "TRA COBRA GOLD (SATTAHIP/GULF OF THAILAND)", 
+        "type": "VTD", 
+        "country": "TH" 
+      },
+      "geometry": { 
+        "type": "Polygon", 
+        "coordinates": [ [ 
+          [100.650000, 12.650000], 
+          [101.050000, 12.650000], 
+          [101.050000, 12.300000], 
+          [100.650000, 12.300000], 
+          [100.650000, 12.650000] 
+        ] ] 
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tra_cg_chanthaburi",
+      "properties": { 
+        "name": "TRA COBRA GOLD (BAN CHAN KREM)", 
+        "type": "VTD", 
+        "country": "TH" 
+      },
+      "geometry": { 
+        "type": "Polygon", 
+        "coordinates": [ [ 
+          [101.950000, 13.050000], 
+          [102.250000, 13.050000], 
+          [102.250000, 12.800000], 
+          [101.950000, 12.800000], 
+          [101.950000, 13.050000] 
+        ] ] 
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tra_cg_lopburi",
+      "properties": { 
+        "name": "TRA COBRA GOLD (LOP BURI TRAINING AREA)", 
+        "type": "VTD", 
+        "country": "TH" 
+      },
+      "geometry": { 
+        "type": "Polygon", 
+        "coordinates": [ [ 
+          [100.600000, 15.350000], 
+          [100.950000, 15.350000], 
+          [100.950000, 15.000000], 
+          [100.600000, 15.000000], 
+          [100.600000, 15.350000] 
+        ] ] 
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "tra_cg_rayong",
+      "properties": { 
+        "name": "TRA COBRA GOLD (RAYONG / KHAO CHAMAO)", 
+        "type": "VTD", 
+        "country": "TH" 
+      },
+      "geometry": { 
+        "type": "Polygon", 
+        "coordinates": [ [ 
+          [101.500000, 13.100000], 
+          [101.800000, 13.100000], 
+          [101.800000, 12.850000], 
+          [101.500000, 12.850000], 
+          [101.500000, 13.100000] 
+        ] ] 
+      }
+    }
+  ]
+}
