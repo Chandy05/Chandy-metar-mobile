@@ -239,6 +239,81 @@
       "type": "Feature",
       "properties": { "name": "VTBK ATZ (KAMPHAENG SAEN)", "type": "ATZ", "radius_nm": 5 },
       "geometry": { "type": "Point", "coordinates": [99.9167, 14.1017] }
+    },
+
+    {
+      "type": "Feature",
+      "id": "vtp1",
+      "properties": { "name": "VTP1 BANGKOK CITY (THE GRAND PALACE)", "type": "VTP", "country": "TH" },
+      "geometry": { "type": "Point", "coordinates": [100.491389, 13.750000] },
+      "properties_details": { "radius_nm": 1, "description": "Circle of 1 NM radius centred on The Grand Palace" }
+    },
+    {
+      "type": "Feature",
+      "id": "vtp4",
+      "properties": { "name": "VTP4 CHAYBADAL", "type": "VTP", "country": "TH" },
+      "geometry": { "type": "Polygon", "coordinates": [ [ [100.950000, 15.050000], [101.350000, 15.050000], [101.350000, 15.350000], [100.950000, 15.350000], [100.950000, 15.050000] ] ] },
+      "properties_details": { "description": "Air Weapon Training Range Area (Coordinates generalized)" }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTBS CTR (SUVARNABHUMI)", "type": "CTR", "radius_nm": 30 },
+      "geometry": { "type": "Point", "coordinates": [100.7489, 13.6858] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTBS ATZ (SUVARNABHUMI)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [100.7489, 13.6858] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "PHUKET TMA", "type": "TMA", "radius_nm": 50 },
+      "geometry": { "type": "Point", "coordinates": [98.3164, 8.1131] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTSP CTR (PHUKET)", "type": "CTR", "radius_nm": 30 },
+      "geometry": { "type": "Point", "coordinates": [98.3164, 8.1131] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTSP ATZ (PHUKET)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [98.3164, 8.1131] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "CHIANG MAI TMA", "type": "TMA", "radius_nm": 50 },
+      "geometry": { "type": "Point", "coordinates": [98.9626, 18.7668] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTCC CTR (CHIANG MAI)", "type": "CTR", "radius_nm": 30 },
+      "geometry": { "type": "Point", "coordinates": [98.9626, 18.7668] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTCC ATZ (CHIANG MAI)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [98.9626, 18.7668] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTUK CTR (KHON KAEN)", "type": "CTR", "radius_nm": 30 },
+      "geometry": { "type": "Point", "coordinates": [102.7822, 16.4644] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTUK ATZ (KHON KAEN)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [102.7822, 16.4644] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTSS CTR (HAT YAI)", "type": "CTR", "radius_nm": 30 },
+      "geometry": { "type": "Point", "coordinates": [100.3925, 6.9331] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "VTSS ATZ (HAT YAI)", "type": "ATZ", "radius_nm": 5 },
+      "geometry": { "type": "Point", "coordinates": [100.3925, 6.9331] }
     }
   ]
 }
