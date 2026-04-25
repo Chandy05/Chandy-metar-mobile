@@ -1,7 +1,6 @@
 {
   "type": "FeatureCollection",
   "features": [
-    /* --- SECTION 1: VTR & VTD (ORIGINAL FILE) --- */
     {
       "type": "Feature",
       "id": "vtr1",
@@ -52,7 +51,6 @@
       "properties": { "name": "VTD43 LOP BURI", "type": "VTD", "country": "TH" },
       "geometry": { "type": "Polygon", "coordinates": [ [ [100.796667, 15.218222], [101.929833, 16.451472], [102.179806, 16.334833], [101.263278, 14.818250], [100.796667, 15.218222] ] ] }
     },
-    /* --- SECTION 2: VTP (PROHIBITED AREAS) --- */
     {
       "type": "Feature",
       "id": "vtp1",
@@ -66,7 +64,6 @@
       "properties": { "name": "VTP4 CHAYBADAL", "type": "VTP", "country": "TH" },
       "geometry": { "type": "Polygon", "coordinates": [ [ [100.950000, 15.050000], [101.350000, 15.050000], [101.350000, 15.350000], [100.950000, 15.350000], [100.950000, 15.050000] ] ] }
     },
-    /* --- SECTION 3: RTAF CTR & ATZ (AIR FORCE BASES) --- */
     {
       "type": "Feature",
       "properties": { "name": "VTBK CTR (KAMPHAENG SAEN)", "type": "CTR", "country": "TH" },
@@ -130,13 +127,13 @@
     {
       "type": "Feature",
       "properties": { "name": "VTUU CTR (UBON RATCHATHANI)", "type": "CTR", "country": "TH" },
-      "geometry": { "type": "Point", "coordinates": [104.87, 15.2513] },
+      "geometry": { "type": "Point", "coordinates": [104.8700, 15.2513] },
       "properties_details": { "radius_nm": 30 }
     },
     {
       "type": "Feature",
       "properties": { "name": "VTUU ATZ (UBON RATCHATHANI)", "type": "ATZ", "country": "TH" },
-      "geometry": { "type": "Point", "coordinates": [104.87, 15.2513] },
+      "geometry": { "type": "Point", "coordinates": [104.8700, 15.2513] },
       "properties_details": { "radius_nm": 5 }
     },
     {
@@ -187,7 +184,6 @@
       "geometry": { "type": "Point", "coordinates": [102.9678, 16.6519] },
       "properties_details": { "radius_nm": 5 }
     },
-    /* --- SECTION 4: U-TAPAO & OTHERS --- */
     {
       "type": "Feature",
       "properties": { "name": "VTBU CTR (U-TAPAO)", "type": "CTR", "country": "TH" },
