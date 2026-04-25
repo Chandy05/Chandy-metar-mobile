@@ -180,163 +180,170 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "BANGKOK TMA", "type": "TMA", "radius_nm": 50 },
-      "geometry": { "type": "Point", "coordinates": [100.6070, 13.9126] }
+      "geometry": { "type": "Point", "coordinates": [100.6070, 13.9126] },
+      "properties": {
+        "name": "VTBD (DON MUEANG)",
+        "airspaces": [
+          { "type": "TMA", "radius_nm": 50 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTBD ATZ (DON MUEANG)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [100.6070, 13.9126] }
+      "geometry": { "type": "Point", "coordinates": [100.6630, 14.8746] },
+      "properties": {
+        "name": "VTBL (KHOK KATHIAM)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 12 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTBL CTR (KHOK KATHIAM)", "type": "CTR", "radius_nm": 12 },
-      "geometry": { "type": "Point", "coordinates": [100.6630, 14.8746] }
+      "geometry": { "type": "Point", "coordinates": [100.3000, 15.2764] },
+      "properties": {
+        "name": "VTPI (TAKHLI)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTBL ATZ (KHOK KATHIAM)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [100.6630, 14.8746] }
+      "geometry": { "type": "Point", "coordinates": [102.0785, 14.9359] },
+      "properties": {
+        "name": "VTUN (KHORAT)",
+        "airspaces": [
+          { "type": "TMA", "radius_nm": 30 },
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTPI CTR (TAKHLI)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [100.3000, 15.2764] }
+      "geometry": { "type": "Point", "coordinates": [100.6430, 14.9494] },
+      "properties": {
+        "name": "VTBH (SA PRAN NAK)",
+        "airspaces": [
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTPI ATZ (TAKHLI)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [100.3000, 15.2764] }
+      "geometry": { "type": "Point", "coordinates": [102.7880, 17.3864] },
+      "properties": {
+        "name": "VTUD (UDON THANI)",
+        "airspaces": [
+          { "type": "TMA", "radius_nm": 30 },
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTUN TMA (KHORAT)", "type": "TMA", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [102.0785, 14.9359] }
+      "geometry": { "type": "Point", "coordinates": [99.9167, 14.1017] },
+      "properties": {
+        "name": "VTBK (KAMPHAENG SAEN)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTUN CTR (KHORAT)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [102.0785, 14.9359] }
+      "geometry": { "type": "Point", "coordinates": [101.0047, 12.6794] },
+      "properties": {
+        "name": "VTBU (U-TAPAO)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTUN ATZ (KHORAT)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [102.0785, 14.9359] }
+      "geometry": { "type": "Point", "coordinates": [99.1389, 9.1361] },
+      "properties": {
+        "name": "VTSB (SURAT THANI)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTBH ATZ (SA PRAN NAK)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [100.6430, 14.9494] }
+      "geometry": { "type": "Point", "coordinates": [104.8700, 15.2513] },
+      "properties": {
+        "name": "VTUU (UBON RATCHATHANI)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTUD TMA (UDON THANI)", "type": "TMA", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [102.7880, 17.3864] }
+      "geometry": { "type": "Point", "coordinates": [98.9626, 18.7668] },
+      "properties": {
+        "name": "VTCC (CHIANG MAI)",
+        "airspaces": [
+          { "type": "TMA", "radius_nm": 50 },
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTUD CTR (UDON THANI)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [102.7880, 17.3864] }
+      "geometry": { "type": "Point", "coordinates": [100.2819, 16.7731] },
+      "properties": {
+        "name": "VTPP (PHITSANULOK)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTUD ATZ (UDON THANI)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [102.7880, 17.3864] }
+      "geometry": { "type": "Point", "coordinates": [100.3925, 6.9331] },
+      "properties": {
+        "name": "VTSS (HAT YAI)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTBK CTR (KAMPHAENG SAEN)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [99.9167, 14.1017] }
+      "geometry": { "type": "Point", "coordinates": [102.9678, 16.6519] },
+      "properties": {
+        "name": "VTUZ (NAM PHONG)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     },
     {
       "type": "Feature",
-      "properties": { "name": "VTBK ATZ (KAMPHAENG SAEN)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [99.9167, 14.1017] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTBU CTR (U-TAPAO)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [101.0047, 12.6794] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTBU ATZ (U-TAPAO)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [101.0047, 12.6794] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTSB CTR (SURAT THANI)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [99.1389, 9.1361] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTSB ATZ (SURAT THANI)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [99.1389, 9.1361] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTUU CTR (UBON RATCHATHANI)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [104.8700, 15.2513] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTUU ATZ (UBON RATCHATHANI)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [104.8700, 15.2513] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTCC TMA (CHIANG MAI)", "type": "TMA", "radius_nm": 50 },
-      "geometry": { "type": "Point", "coordinates": [98.9626, 18.7668] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTCC CTR (CHIANG MAI)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [98.9626, 18.7668] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTCC ATZ (CHIANG MAI)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [98.9626, 18.7668] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTPP CTR (PHITSANULOK)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [100.2819, 16.7731] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTPP ATZ (PHITSANULOK)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [100.2819, 16.7731] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTSS CTR (HAT YAI)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [100.3925, 6.9331] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTSS ATZ (HAT YAI)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [100.3925, 6.9331] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTUZ CTR (NAM PHONG)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [102.9678, 16.6519] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTUZ ATZ (NAM PHONG)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [102.9678, 16.6519] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTBP CTR (PRACHUAP KHIRI KHAN)", "type": "CTR", "radius_nm": 30 },
-      "geometry": { "type": "Point", "coordinates": [99.8044, 11.7885] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "name": "VTBP ATZ (PRACHUAP KHIRI KHAN)", "type": "ATZ", "radius_nm": 5 },
-      "geometry": { "type": "Point", "coordinates": [99.8044, 11.7885] }
+      "geometry": { "type": "Point", "coordinates": [99.8044, 11.7885] },
+      "properties": {
+        "name": "VTBP (PRACHUAP KHIRI KHAN)",
+        "airspaces": [
+          { "type": "CTR", "radius_nm": 30 },
+          { "type": "ATZ", "radius_nm": 5 }
+        ]
+      }
     }
   ]
 }
