@@ -5,19 +5,19 @@
       "type": "Feature",
       "id": "route_a464",
       "properties": { "name": "ROUTE A464", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [102.07, 14.93], [104.87, 15.25]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [102.07, 14.93], [104.87, 15.25]] }
     },
     {
       "type": "Feature",
       "id": "route_w1",
       "properties": { "name": "ROUTE W1", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [99.95, 12.63], [99.36, 10.71], [99.13, 9.13], [98.31, 8.11]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [99.95, 12.63], [99.36, 10.71], [99.13, 9.13], [98.31, 8.11]] }
     },
     {
       "type": "Feature",
       "id": "route_w4",
       "properties": { "name": "ROUTE W4", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [101.67, 12.78], [102.31, 12.27]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [101.67, 12.78], [102.31, 12.27]] }
     },
     {
       "type": "Feature",
@@ -29,13 +29,13 @@
       "type": "Feature",
       "id": "route_w6",
       "properties": { "name": "ROUTE W6", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [99.94, 8.54], [100.39, 6.93]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [99.94, 8.54], [100.39, 6.93]] }
     },
     {
       "type": "Feature",
       "id": "route_w7",
       "properties": { "name": "ROUTE W7", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [100.30, 15.27], [100.28, 16.77]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [100.30, 15.27], [100.28, 16.77]] }
     },
     {
       "type": "Feature",
@@ -47,7 +47,7 @@
       "type": "Feature",
       "id": "route_w9",
       "properties": { "name": "ROUTE W9", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [98.96, 18.76]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [98.96, 18.76]] }
     },
     {
       "type": "Feature",
@@ -71,25 +71,25 @@
       "type": "Feature",
       "id": "route_w15",
       "properties": { "name": "ROUTE W15", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [102.78, 17.38]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [102.78, 17.38]] }
     },
     {
       "type": "Feature",
       "id": "route_w19",
       "properties": { "name": "ROUTE W19", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [98.98, 8.09]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [98.98, 8.09]] }
     },
     {
       "type": "Feature",
       "id": "route_w21",
       "properties": { "name": "ROUTE W21", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [100.28, 16.77], [99.88, 19.95]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [100.28, 16.77], [99.88, 19.95]] }
     },
     {
       "type": "Feature",
       "id": "route_r474",
       "properties": { "name": "ROUTE R474", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [101.67, 12.78], [102.31, 12.27]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [101.67, 12.78], [102.31, 12.27]] }
     },
     {
       "type": "Feature",
@@ -101,13 +101,13 @@
       "type": "Feature",
       "id": "route_w2",
       "properties": { "name": "ROUTE W2", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [101.00, 12.67], [102.32, 12.28]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [101.00, 12.67], [102.32, 12.28]] }
     },
     {
       "type": "Feature",
       "id": "route_w3",
       "properties": { "name": "ROUTE W3", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [99.95, 12.63], [99.13, 9.13]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [99.95, 12.63], [99.13, 9.13]] }
     },
     {
       "type": "Feature",
@@ -125,19 +125,19 @@
       "type": "Feature",
       "id": "route_r325",
       "properties": { "name": "ROUTE R325", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [99.13, 9.13], [98.31, 8.11]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [99.13, 9.13], [98.31, 8.11]] }
     },
     {
       "type": "Feature",
       "id": "route_g463",
       "properties": { "name": "ROUTE G463", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [100.39, 6.93]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [100.39, 6.93]] }
     },
     {
       "type": "Feature",
       "id": "route_n891",
       "properties": { "name": "ROUTE N891", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [100.13, 15.67], [98.96, 18.76]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [100.13, 15.67], [98.96, 18.76]] }
     },
     {
       "type": "Feature",
@@ -149,19 +149,19 @@
       "type": "Feature",
       "id": "route_p901",
       "properties": { "name": "ROUTE P901", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [100.16, 18.13], [99.88, 19.95]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [100.16, 18.13], [99.88, 19.95]] }
     },
     {
       "type": "Feature",
       "id": "route_l301",
       "properties": { "name": "ROUTE L301", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [98.00, 13.00]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [98.00, 13.00]] }
     },
     {
       "type": "Feature",
       "id": "route_m751",
       "properties": { "name": "ROUTE M751", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.75, 13.68], [99.00, 10.00], [98.00, 6.00]] }
+      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [99.00, 10.00], [98.00, 6.00]] }
     }
   ]
 }
