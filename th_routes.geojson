@@ -147,12 +147,6 @@
     },
     {
       "type": "Feature",
-      "id": "route_p901",
-      "properties": { "name": "ROUTE P901", "type": "ROUTE" },
-      "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [100.16, 18.13], [99.88, 19.95]] }
-    },
-    {
-      "type": "Feature",
       "id": "route_l301",
       "properties": { "name": "ROUTE L301", "type": "ROUTE" },
       "geometry": { "type": "LineString", "coordinates": [[100.5961, 13.8936], [98.00, 13.00]] }
